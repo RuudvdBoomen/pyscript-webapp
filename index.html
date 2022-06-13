@@ -17,23 +17,25 @@
     </py-env>
     <header class="bg-black w-full py-5">
         <div class="container flex flex-col items-center justify-center">
-            <h1 class="text-white text-2xl font-bold leading-7 sm:text-3xl sm:truncate">Cocktails</h1>
+            <h1 class="font-mono text-2xl font-bold leading-7 text-white sm:truncate sm:text-3xl">COCKTAILS</h1>
             <div>
-                <div class="flex flex-row my-2">
+                <div class="flex flex-col m-2 sm:flex-row">
                     <input placeholder="Search"
-                        class="flex-auto shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-center focus:outline-none focus:shadow-outline"
+                        class="flex-1 focus:shadow-outline w-full appearance-none rounded border py-2 px-3 text-center leading-tight text-gray-700 shadow focus:outline-none"
                         type="text" id="search-input">
-                    <button
-                        class="flex-auto bg-blue-500 hover:bg-blue-700 text-white font-bold mx-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        id="search-button" pys-onClick="search_cocktails">Go!</button>
-                    <button
-                        class="flex-auto bg-red-500 w-28 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        id="clear-button" pys-onClick="clear_search">Clear</button>
+                    <div class="flex-1 flex flex-row mt-2 sm:mt-0">
+                        <button
+                            class="flex-1 mr-2 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none sm:mx-2"
+                            id="search-button" pys-onclick="search_cocktails">Search</button>
+                        <button
+                            class="flex-1 rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none"
+                            id="clear-button" pys-onclick="clear_search">Clear</button>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <div id="cocktails" class="container my-5 grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-10">
+    <div id="cocktails" class="container my-5 grid grid-cols-1 gap-2 sm:grid-cols-3 lg:gap-10">
     </div>
     <py-script src="./src/cocktail_api.py"></py-script>
 </body>
